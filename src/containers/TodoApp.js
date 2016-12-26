@@ -2,10 +2,10 @@
  * Created by kazanture on 12/26/16.
  */
 let nextTodoId = 0;
-const TodoApp = ({store}) => (
+const TodoApp = () => (
     <div>
-        <AddTodo store={store}/>
-        <VisibleTodoList store={store}/>
-        <Footer store={store}/>
+        <AddTodo />
+        <VisibleTodoList />
+        <Footer />
     </div>
 )

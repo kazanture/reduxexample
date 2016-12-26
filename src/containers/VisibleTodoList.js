@@ -3,7 +3,7 @@
  */
 class VisibleTodoList extends Component {
     componentDidMount() {
-        const {store} =this.props;
+        const {store} =this.context;
         this.unsubscribe = store.subscribe(() =>
             this.forceUpdate()
         );
@@ -15,7 +15,7 @@ class VisibleTodoList extends Component {
 
     render () {
         const props = this.props;
-        const {store} =this.props;
+        const {store} = this.context;
         const state = store.getState();
 
         return (
@@ -36,3 +36,6 @@ class VisibleTodoList extends Component {
         );
     }
 }
+VisibleTodoList.contextTypes = {
+    store: React.PropTypes.object
+};

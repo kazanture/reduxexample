@@ -1,7 +1,7 @@
 /**
  * Created by kazanture on 12/26/16.
  */
-const AddTodo = ({store}) => {
+const AddTodo = (props, { store } ) => {
     let input;
     return(
         <div>
@@ -20,4 +20,8 @@ const AddTodo = ({store}) => {
     </button>
             </div>
     );
+};
+
+AddTodo.contextTypes = {
+    store: React.PropTypes.object
 };
