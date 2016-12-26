@@ -1,19 +1,19 @@
 /**
  * Created by kazanture on 12/26/16.
  */
-const AddTodo = ({
-    onAddClick
-}) => {
+const AddTodo = () => {
     let input;
     return(
         <div>
     <input ref={node => {
         input=node;
-
     }} />
     <button onClick={()=> {
-
-        onAddClick(input.value);
+        store.dispatch({
+            type: 'ADD_TODO',
+            id: nextTodoId++,
+            text: input.value
+        })
         input.value = '';
     }}>
     Add Todo
