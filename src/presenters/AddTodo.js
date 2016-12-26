@@ -11,11 +11,7 @@ let AddTodo = ({dispatch}) => {
         input=node;
     }} />
     <button onClick={()=> {
-        dispatch({
-            type: 'ADD_TODO',
-            id: nextTodoId++,
-            text: input.value
-        })
+        dispatch(addTodo(input.value));
         input.value = '';
     }}>
     Add Todo
