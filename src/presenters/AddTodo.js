@@ -1,7 +1,7 @@
 /**
  * Created by kazanture on 12/26/16.
  */
-const AddTodo = () => {
+const AddTodo = ({store}) => {
     let input;
     return(
         <div>

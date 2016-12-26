@@ -3,6 +3,7 @@
  */
 class VisibleTodoList extends Component {
     componentDidMount() {
+        const {store} =this.props;
         this.unsubscribe = store.subscribe(() =>
             this.forceUpdate()
         );
@@ -14,6 +15,7 @@ class VisibleTodoList extends Component {
 
     render () {
         const props = this.props;
+        const {store} =this.props;
         const state = store.getState();
 
         return (

@@ -1,8 +1,8 @@
-const store = createStrore(todoApp);
+const {createStore} = Redux;
 const {Component} = React;
 
 
 ReactDOM.render(
-    <TodoApp/>,
+    <TodoApp store={createStore(todoApp)}/>,
     document.getElementById('root')
 );
